@@ -415,8 +415,8 @@ export default function HomePage() {
                       cx="50%"
                       cy="50%"
                       outerRadius={100}
-                      label={({ category, percent }) =>
-                        `${category} ${(percent * 100).toFixed(0)}%`
+                      label={({ payload, percent }) =>
+                        `${payload?.category ?? "Sin categoría"} ${((percent ?? 0) * 100).toFixed(0)}%`
                       }
                     >
                       {groupedByCategory.map((entry, index) => (
